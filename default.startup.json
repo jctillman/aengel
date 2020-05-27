@@ -1,3 +1,4 @@
 {
-  "data_dir": "./data"
+  "data_dir": "./data",
+  "resize_factor": 0.25
 }

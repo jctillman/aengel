@@ -1,14 +1,4 @@
 
-import json
-from argparse import ArgumentParser
-from jsonschema import validate
-
-def get_settings(settings_path):
-    json_file = open(settings_path)
-    data = json.load(json_file)
-    validate(instance=data, schema=master_schema)
-    return data
-
 timed_schema = {
     "type": "object",
     "properties": {

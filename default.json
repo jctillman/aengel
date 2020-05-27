@@ -2,23 +2,29 @@
   "unlabeled": {
     "command": [
       "python3",
-      "./src/entry_unlabeled.py",
-      "./default.unlabeled.json"
+      "./src/entry.py",
+      "./default.unlabeled.json",
+      "unlabeled"
     ],
     "timing": {
       "time_start": "7:00",
       "time_end": "20:00",
-      "minimum_interval": 1,
-      "maximum_interval": 2
+      "minimum_interval": 100,
+      "maximum_interval": 200
     }
   },
   "startup": {
-    "command": ["ls"],
+    "command": [
+      "python3",
+      "./src/entry.py",
+      "./default.startup.json",
+      "startup"
+    ],
     "timing": {
       "time_start": "7:00",
       "time_end": "20:00",
-      "minimum_interval": 3,
-      "maximum_interval": 4
+      "minimum_interval": 2,
+      "maximum_interval": 3
     }
   }
 }
