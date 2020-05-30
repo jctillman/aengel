@@ -16,4 +16,4 @@ def main():
     while True:
         unlabledEvent.check()
         startupEvent.check()
-        time.sleep(0.25)        
+        time.sleep(0.5)        
