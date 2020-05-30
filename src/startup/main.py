@@ -1,20 +1,29 @@
 
 import sys
-from uuid import uuid1
-from os import path, chdir, getcwd, makedirs
+from os import path
 
 from settings import get_settings
 from image.get_image import get_image
+
 from startup.schema import schema
+from popups.get_data import get_data
+
+from save.save_to_folder import save_to_folder
 
 def main():
 
     settings = get_settings(sys.argv[1], schema)
-
     base_path = path.join(settings["data_dir"], "startup")
-    makedirs(base_path, exist_ok=True)
 
     new_image = get_image(settings['resize_factor'])
-    image_name = uuid1().hex + ".png"
-    new_image.save(path.join(base_path, image_name))
-    print(image_name)
+
+    # Get answers to save with
+    answers = get_data('Questions', settings["questions"])
+    data = { "answers": answers }
+
+    save_to_folder(new_image, data, base_path)
+
+
+
+
+

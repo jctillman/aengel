@@ -1,4 +1,14 @@
 {
   "data_dir": "./data",
-  "resize_factor": 0.25
+  "resize_factor": 0.25,
+  "questions": [
+    {
+      "question": "What are you doing?",
+      "answers": ["Work", "Personal", "Wasting"]
+    },
+    {
+      "question": "Are you happy with what you're doing?",
+      "answers": ["Happy", "Unhappy"]
+    }
+  ]
 }
