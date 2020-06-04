@@ -1,12 +1,17 @@
 {
   "data_dir": "./data",
-  "resize_factor": 0.25,
   "questions": [
     {
       "question": "Is what is on the screen matching current highest self?",
       "answers": [
-        { "key": "happy", "display": "Yes" },
-        { "key": "unhappy", "display": "No" }
+        {
+          "key": "happy",
+          "display": "Yes"
+        },
+        {
+          "key": "unhappy",
+          "display": "No"
+        }
       ]
     },
     {
@@ -14,15 +19,15 @@
       "answers": [
         {
           "key": "work",
-          "display": "Work"
+          "display": "Work Goals"
         },
         {
           "key": "personal",
-          "display": "Personal"
+          "display": "Personal Goals"
         },
         {
           "key": "explore",
-          "display": "Explore"
+          "display": "Directed Exploration"
         },
         {
           "key": "waste",

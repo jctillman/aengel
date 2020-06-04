@@ -13,14 +13,14 @@ from save.save_to_folder import save_to_folder
 def main():
 
     settings = get_settings(sys.argv[1], schema)
-    base_path = path.join(settings["data_dir"], "startup")
+    base_path = path.join(settings["data_dir"], "labeled")
 
     new_image = get_image(settings['resize_factor'])
 
     # Get answers to save with
     answers = get_data('Questions', settings["questions"])
     data = { "answers": answers }
-
+    print(data)
     save_to_folder(new_image, data, base_path)
 
 
