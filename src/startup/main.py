@@ -19,9 +19,10 @@ def main():
 
     # Get answers to save with
     answers = get_data('Questions', settings["questions"])
-    data = { "answers": answers }
-    print(data)
-    save_to_folder(new_image, data, base_path)
+    
+    if answers is not None:
+        data = { "answers": answers }
+        save_to_folder(new_image, data, base_path)
 
 
 

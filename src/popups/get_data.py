@@ -19,7 +19,7 @@ def get_data(title, possibilities):
     while True:
 
         if time.time() - 15 > timeout:
-            return ['absent']
+            return None
 
         event, values = window.read(timeout=500)
         for i_row, row in enumerate(possibilities):
@@ -32,4 +32,4 @@ def get_data(title, possibilities):
         
 
 
-    return ['present'] + answers
+    return answers
