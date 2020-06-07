@@ -1,17 +1,13 @@
 
 import sys
 
-from main import main
-from unlabeled.main import main as unlabeled_main
-from startup.main import main as startup_main
-from train.main import main as train_main
+from run.unlabeled.main import main as unlabeled_main
+from run.startup.main import main as startup_main
+from run.train.main import main as train_main
 
 def go():
 
-    if len(sys.argv) < 3:
-        main()
-        return
-
+    print(sys.argv)
     boot = sys.argv[2]
     if boot == "unlabeled":
         unlabeled_main()

@@ -1,1 +1,0 @@
-from image.get_image import get_image
