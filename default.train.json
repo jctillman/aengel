@@ -1,5 +1,6 @@
 {
   "data_dir": "./data",
+  "input_size": 16,
   "questions": [
     {
       "question": "Is what is on the screen matching current highest self?",

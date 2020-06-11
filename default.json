@@ -24,7 +24,7 @@
       "time_start": "7:00",
       "time_end": "24:00",
       "minimum_interval": 120,
-      "maximum_interval": 360
+      "maximum_interval": 420
     }
   }
 }

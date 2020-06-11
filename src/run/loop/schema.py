@@ -18,7 +18,7 @@ processs_schema = {
     }
 }
 
-master_schema = {
+schema = {
     "type": "object",
     "properties": {
         "unlabeled": processs_schema,

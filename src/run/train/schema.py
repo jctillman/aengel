@@ -2,7 +2,8 @@ schema = {
     "type": "object",
     "properties": {
         "data_dir": { "type": "string" },
-        "resize_factor": {"type": "number"},
+        "resize_factor": {"type": "number" },
+        "input_size": { "type": "number" },
         "questions": {
             "type": "array",
             "items": {
