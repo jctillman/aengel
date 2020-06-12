@@ -1,6 +1,8 @@
 {
   "data_dir": "./data",
-  "input_size": 16,
+  "input_size": 64,
+  "learning_rate": 0.0001,
+  "channel_mult": 4,
   "questions": [
     {
       "question": "Is what is on the screen matching current highest self?",

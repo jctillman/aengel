@@ -21,7 +21,7 @@ class SimpleNet(torch.nn.Module):
               nns[nns_name] = torch.nn.Conv2d(
                     current_channels,
                     current_channels * channel_mult,
-                    3, padding=1)
+                    3, padding=1, bias=False if current_dim < 8 else True)
 
               current_dim = current_dim / 2
               current_channels = current_channels * self.channel_mult
@@ -32,7 +32,7 @@ class SimpleNet(torch.nn.Module):
         fcs = {}
         for i in range(len(output_dims)):
             fcs_name = 'fcs_' + str(int(i))
-            fcs[fcs_name] = torch.nn.Linear(current_channels, output_dims[i])
+            fcs[fcs_name] = torch.nn.Linear(current_channels, output_dims[i], bias=False)
         self.fcs = torch.nn.ModuleDict(fcs)
 
     def forward(self, x):
@@ -45,7 +45,7 @@ class SimpleNet(torch.nn.Module):
             nns_name = "conv_"+str(int(current_dim))
 
             x = self.nns[nns_name](x)
-            x = torch.nn.functional.relu(x) 
+            x = torch.nn.functional.elu(x) 
             x = torch.nn.functional.max_pool2d(x, 2)
             
             current_dim = current_dim / 2
