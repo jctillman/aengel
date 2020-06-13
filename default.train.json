@@ -1,45 +1,23 @@
 {
   "data_dir": "./data",
-  "input_size": 64,
-  "learning_rate": 0.0001,
-  "channel_mult": 4,
+  "input_size": 128,
+  "learning_rate": 0.05,
+  "channel_mult": 2,
+  "start_channels": 9,
+  "save_name": "20190612_model.pkl",
   "questions": [
     {
-      "question": "Is what is on the screen matching current highest self?",
+      "question": "Are you producing or consuming?",
       "answers": [
-        {
-          "key": "happy",
-          "display": "Yes"
-        },
-        {
-          "key": "unhappy",
-          "display": "No"
-        }
+        { "key": "producing", "display": "Producing" },
+        { "key": "consuming", "display": "Consuming" }
       ]
     },
     {
-      "question": "For what reason is what is on the screen on it?",
+      "question": "Would you hide what is on the screen if someone came in?",
       "answers": [
-        {
-          "key": "work",
-          "display": "Work Goals"
-        },
-        {
-          "key": "personal",
-          "display": "Personal Goals"
-        },
-        {
-          "key": "explore",
-          "display": "Directed Exploration"
-        },
-        {
-          "key": "waste",
-          "display": "Waste"
-        },
-        {
-          "key": "other",
-          "display": "Other"
-        }
+        { "key": "no", "display": "Probably not" },
+        { "key": "yes", "display": "Almost certainly" }
       ]
     }
   ]

@@ -1,37 +1,19 @@
 {
   "data_dir": "./data",
-  "resize_factor": 0.25,
+  "resize_factor": 0.125,
   "questions": [
     {
-      "question": "Is what is on the screen matching current highest self?",
+      "question": "Are you producing or consuming?",
       "answers": [
-        { "key": "happy", "display": "Yes" },
-        { "key": "unhappy", "display": "No" }
+        { "key": "producing", "display": "Producing" },
+        { "key": "consuming", "display": "Consuming" }
       ]
     },
     {
-      "question": "For what reason is what is on the screen on it?",
+      "question": "Would you hide what is on the screen if someone came in?",
       "answers": [
-        {
-          "key": "work",
-          "display": "Work"
-        },
-        {
-          "key": "personal",
-          "display": "Personal"
-        },
-        {
-          "key": "explore",
-          "display": "Explore"
-        },
-        {
-          "key": "waste",
-          "display": "Waste"
-        },
-        {
-          "key": "other",
-          "display": "Other"
-        }
+        { "key": "no", "display": "Probably not" },
+        { "key": "yes", "display": "Almost certainly" }
       ]
     }
   ]

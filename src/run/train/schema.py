@@ -4,6 +4,9 @@ schema = {
         "data_dir": { "type": "string" },
         "resize_factor": {"type": "number" },
         "input_size": { "type": "number" },
+        "start_channels": { "type": "number" },
+        "channel_mult": { "type": "number" },
+        "save_name": { "type": "string" },
         "questions": {
             "type": "array",
             "items": {

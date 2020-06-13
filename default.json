@@ -9,8 +9,8 @@
     "timing": {
       "time_start": "7:00",
       "time_end": "21:00",
-      "minimum_interval": 120,
-      "maximum_interval": 360
+      "minimum_interval": 1000,
+      "maximum_interval": 10000
     }
   },
   "startup": {
@@ -23,8 +23,8 @@
     "timing": {
       "time_start": "7:00",
       "time_end": "24:00",
-      "minimum_interval": 120,
-      "maximum_interval": 420
+      "minimum_interval": 1,
+      "maximum_interval": 10
     }
   }
 }
